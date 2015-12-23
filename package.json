@@ -1,0 +1,31 @@
+{
+  "name": "barscan",
+  "version": "0.1.0",
+  "description": "A simple bar code scanner web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:js": "browserify src/app.js > js/app.min.js"
+  },
+  "author": "Matita",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^12.0.1"
+  },
+  "dependencies": {
+    "zxing": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matita/barscan.git"
+  },
+  "keywords": [
+    "barcode",
+    "scanner",
+    "webapp"
+  ],
+  "bugs": {
+    "url": "https://github.com/matita/barscan/issues"
+  },
+  "homepage": "https://github.com/matita/barscan"
+}
