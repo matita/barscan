@@ -3,7 +3,7 @@ var scanBarcode = require('./util/scanbarcode.js');
 var imageFromFile = require('./util/image-from-file.js');
 
 module.exports = function(file, callback) {
-  imageFromFile(file, function(img) {
+  imageFromFile(file, 500, 500, function(img) {
     scanQR(img, function(qrErr, result) {
       if (!qrErr && result)
         return callback(null, result, 'QR');

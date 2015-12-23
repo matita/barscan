@@ -1,10 +1,9 @@
 var BarcodeReader = require('barcode-reader');
-var imageFromFile = require('./image-from-file.js');
-
 
 var extCallback;
 
 BarcodeReader.Init();
+BarcodeReader.DecodeSingleBarcode();
 BarcodeReader.SetImageCallback(function(results) {
   if (!extCallback)
     return;
