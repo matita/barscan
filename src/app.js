@@ -1,4 +1,5 @@
 var qrcode = require('zxing');
+var StackBlur = require('stackblur-canvas');
 
 var canvas = document.getElementById('qr-canvas');
 var ctx = canvas.getContext('2d');
@@ -8,6 +9,8 @@ inp.addEventListener('change', function(e) {
   var img = new Image;
   img.onload = function() {
       drawImageScaled(img, ctx);
+
+      StackBlur.canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 4);
 
       qrcode.decode(function(err, result) {
         alert(err || result);
