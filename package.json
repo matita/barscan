@@ -13,6 +13,8 @@
     "browserify": "^12.0.1"
   },
   "dependencies": {
+    "barcode-reader": "^1.6.1",
+    "jsqr": "^0.1.1",
     "stackblur-canvas": "^1.1.0",
     "zxing": "^0.1.0"
   },
