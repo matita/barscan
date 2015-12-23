@@ -14,6 +14,13 @@ module.exports = function(selector) {
   return {
     add: function(value, format) {
       dom.innerHTML = '<li>' + tmpl(value, format) + '</li>' + dom.innerHTML;
+    },
+
+    setScanning: function(isScanning) {
+      if (isScanning)
+        dom.classList.add('is-scanning');
+      else
+        dom.classList.remove('is-scanning');
     }
   }
 }

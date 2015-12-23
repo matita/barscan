@@ -8,7 +8,9 @@ inp.addEventListener('change', function(e) {
   if (!file)
     return;
 
+  results.setScanning(true);
   scan(file, function(err, result, format) {
+    results.setScanning(false);
     if (err)
       return alert(err);
 
